@@ -410,7 +410,7 @@ void Module::end() {
 
 #if defined(RADIOLIB_BUILD_ARDUINO)
 void Module::SPIbegin() {
-  _spi->begin();
+  _spi->begin(SPI_SCK,SPI_MISO,SPI_MOSI);
 }
 
 void Module::SPIbeginTransaction() {
